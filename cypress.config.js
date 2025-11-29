@@ -1,9 +1,28 @@
+// cypress.config.js
+// Configuração do Cypress com integração do preprocessor para Cucumber
 const { defineConfig } = require("cypress");
+const cucumber = require("cypress-cucumber-preprocessor").default;
 
 module.exports = defineConfig({
   e2e: {
+    // baseUrl facilita usar cy.visit('/').
+    baseUrl: "https://blogdoagi.com.br",
+    // padrão das features
+    specPattern: "cypress/e2e/features/*.feature",
+    supportFile: "cypress/support/e2e.js",
+
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      // integra o preprocessor do cucumber
+      on("file:preprocessor", cucumber());
+      return config;
     },
+  },
+
+  reporter: "mochawesome",
+  reporterOptions: {
+    reportDir: "cypress/reports",
+    overwrite: false,
+    html: true,
+    json: true,
   },
 });

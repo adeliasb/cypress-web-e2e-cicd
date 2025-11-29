@@ -1,15 +1,23 @@
 {
   "name": "cypress-web-e2e-cicd",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Automação E2E do Blog do Agi usando Cypress, Cucumber, POM e CI",
+  "author": "Adélia dos Santos Barroso",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run --config video=false",
+    "cy:open": "cypress open",
+    "report:merge": "mochawesome-merge cypress/reports/*.json > cypress/reports/report.json",
+    "report:generate": "marge cypress/reports/report.json --reportDir cypress/reports"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
-    "cypress": "^15.7.0"
+    "cypress": "^15.3.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.3.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e/step-definitions/"
   }
 }
