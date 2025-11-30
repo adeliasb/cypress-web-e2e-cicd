@@ -11,11 +11,11 @@
     "report:generate": "marge cypress/reports/report.json --reportDir cypress/reports"
   },
   "devDependencies": {
-    "cypress": "^15.3.0",
+    "cypress": "^15.7.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "mochawesome": "^7.1.4",
-    "mochawesome-merge": "^5.0.0",
-    "mochawesome-report-generator": "^6.3.0"
+    "mochawesome-merge": "^5.1.0",
+    "mochawesome-report-generator": "^6.3.2"
   },
   "cypress-cucumber-preprocessor": {
     "stepDefinitions": "cypress/e2e/step-definitions/"

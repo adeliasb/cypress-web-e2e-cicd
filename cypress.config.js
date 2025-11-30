@@ -1,7 +1,28 @@
 // cypress.config.js
-// Configuração do Cypress com integração do preprocessor para Cucumber
+// Configuração principal do Cypress com integração do preprocessor cucumber
 const { defineConfig } = require("cypress");
 const cucumber = require("cypress-cucumber-preprocessor").default;
+
+module.exports = defineConfig({
+  e2e: {
+    baseUrl: "http://lojaebac.ebaconline.art.br",
+    specPattern: "cypress/e2e/features/*.feature",
+    supportFile: "cypress/support/e2e.js",
+
+    setupNodeEvents(on, config) {
+      on("file:preprocessor", cucumber());
+      return config;
+    },
+  },
+
+  reporter: "mochawesome",
+  reporterOptions: {
+    reportDir: "cypress/reports",
+    overwrite: false,
+    html: true,
+    json: true,
+  },
+});
 
 module.exports = defineConfig({
   e2e: {
