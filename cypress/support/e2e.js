@@ -14,4 +14,13 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import "./commands";
+
+Cypress.on("uncaught:exception", (err) => {
+  if (
+    err.message.includes("astra is not defined") ||
+    err.message.includes("$scope.imagesLoaded")
+  ) {
+    return false; // ignora esses erros
+  }
+});

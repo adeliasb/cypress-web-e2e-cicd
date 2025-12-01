@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2025-11-30T11:55:20.496Z",
+    "end": "2025-11-30T11:55:35.671Z",
+    "duration": 15175,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e2ec9d85-1b9b-49a1-bc89-3f3002be47eb",
+      "title": "",
+      "fullFile": "cypress/e2e/features/search.feature",
+      "file": "cypress/e2e/features/search.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bb5d4020-838e-4aac-9717-d93b5176f08d",
+          "title": "Pesquisa de artigos no Blog do Agi",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Buscar por termo existente e abrir um artigo",
+              "fullTitle": "Pesquisa de artigos no Blog do Agi Buscar por termo existente e abrir um artigo",
+              "timedOut": null,
+              "duration": 8782,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.header-search .search-submit`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.header-search .search-submit`, but never found it.\n    at SearchPage.searchIcon (cypress/pages/search.page.js:7:14)\n    at Context.eval (cypress/e2e/step_definitions/search.steps.js:18:13)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)\n    at getRet (https://blog.agibank.com.br/__cypress/runner/cypress_runner.js:122456:20)\n    at tryCatcher (https://blog.agibank.com.br/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://blog.agibank.com.br/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://blog.agibank.com.br/__cypress/runner/cypress_runner.js:122467:66)\n    at Context.then (https://blog.agibank.com.br/__cypress/runner/cypress_runner.js:122718:21)",
+                "diff": null
+              },
+              "uuid": "c5b96839-e637-49de-8f7b-0bc975fb4e04",
+              "parentUUID": "bb5d4020-838e-4aac-9717-d93b5176f08d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buscar por termo inexistente exibe mensagem de sem resultados",
+              "fullTitle": "Pesquisa de artigos no Blog do Agi Buscar por termo inexistente exibe mensagem de sem resultados",
+              "timedOut": null,
+              "duration": 4804,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.header-search .search-submit`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.header-search .search-submit`, but never found it.\n    at SearchPage.searchIcon (cypress/pages/search.page.js:7:14)\n    at Context.eval (cypress/e2e/step_definitions/search.steps.js:18:13)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)\n    at getRet (https://blog.agibank.com.br/__cypress/runner/cypress_runner.js:122456:20)\n    at tryCatcher (https://blog.agibank.com.br/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://blog.agibank.com.br/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://blog.agibank.com.br/__cypress/runner/cypress_runner.js:122467:66)\n    at Context.then (https://blog.agibank.com.br/__cypress/runner/cypress_runner.js:122718:21)",
+                "diff": null
+              },
+              "uuid": "fd9d525f-1e0f-4acc-8959-98313f186831",
+              "parentUUID": "bb5d4020-838e-4aac-9717-d93b5176f08d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "c5b96839-e637-49de-8f7b-0bc975fb4e04",
+            "fd9d525f-1e0f-4acc-8959-98313f186831"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 13586,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

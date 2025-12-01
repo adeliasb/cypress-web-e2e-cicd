@@ -1,12 +1,10 @@
-// cypress.config.js
 const { defineConfig } = require("cypress");
 const cucumber = require("cypress-cucumber-preprocessor").default;
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: "https://blogdoagi.com.br/",
+    baseUrl: "https://blogdoagi.com.br",
     specPattern: "cypress/e2e/features/*.feature",
-    //stepDefinitions: "cypress/e2e/step_definitions/*.js",
     supportFile: "cypress/support/e2e.js",
 
     setupNodeEvents(on, config) {

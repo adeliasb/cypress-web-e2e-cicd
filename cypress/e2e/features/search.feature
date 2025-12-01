@@ -4,7 +4,7 @@ Funcionalidade: Pesquisa de artigos no Blog do Agi
   Eu quero usar a busca para encontrar artigos relevantes
   Para acessar conteúdo por tema e verificar que os resultados aparecem corretamente
 
-  Contexto:
+Contexto:
     Dado que eu estou na página inicial do blog
 
   Cenario: Buscar por termo existente e abrir um artigo
