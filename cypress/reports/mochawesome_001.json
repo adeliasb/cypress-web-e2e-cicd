@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-12-01T01:16:58.883Z",
+    "end": "2025-12-01T01:17:08.694Z",
+    "duration": 9811,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "063ffcd8-dcd4-4759-952b-eb20dd2f6025",
+      "title": "",
+      "fullFile": "cypress/e2e/features/search.feature",
+      "file": "cypress/e2e/features/search.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d5eff4ab-6092-4953-872c-74ba90d3c6e2",
+          "title": "Pesquisa de artigos no Blog do Agi",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Buscar por termo existente e abrir um artigo",
+              "fullTitle": "Pesquisa de artigos no Blog do Agi Buscar por termo existente e abrir um artigo",
+              "timedOut": null,
+              "duration": 4167,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "e39b174b-e8dc-4d0d-8644-5c73cfed5845",
+              "parentUUID": "d5eff4ab-6092-4953-872c-74ba90d3c6e2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buscar por termo inexistente exibe mensagem de sem resultados",
+              "fullTitle": "Pesquisa de artigos no Blog do Agi Buscar por termo inexistente exibe mensagem de sem resultados",
+              "timedOut": null,
+              "duration": 2533,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "5c01a62f-7efa-4222-aecb-8351c3480dc1",
+              "parentUUID": "d5eff4ab-6092-4953-872c-74ba90d3c6e2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e39b174b-e8dc-4d0d-8644-5c73cfed5845",
+            "5c01a62f-7efa-4222-aecb-8351c3480dc1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6700,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
